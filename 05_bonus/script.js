@@ -12,27 +12,23 @@ const start = new Date().getHours();
 
 function greeting (name, time){
     for (let i = 0; i < 24; i++){
-        if (i <= 13){
-            let result = time + 'Buongiorno' + name
+        if (time <= 13){
+            let result = 'Buongiorno' + ' ' + name
             return result
         }
-        else if (i > 13 && i < 17){
-            let result = time + 'Buon pomeriggio' + name
+        else if (time > 13 && i < 17){
+            let result = 'Buon pomeriggio' + ' ' + name
             return result
         }
         else{
-            let result = time + 'Buonsera' + name
+            let result = 'Buonsera' + ' ' + name
             return result
         }
     }
 }
 
-console.log(greeting(name, start));
-
-
-
 // Invoca la funzione qui e stampa il risultato in console
 
-
+console.log(greeting(name, start));
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
