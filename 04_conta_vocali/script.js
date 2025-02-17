@@ -12,7 +12,7 @@ function getVowels (str){
             arrVowels.push(str[i]);
         }
     }
-    return arrVowels
+    return arrVowels.length
 }
 
 // Invoca la funzione qui e stampa il risultato in console
