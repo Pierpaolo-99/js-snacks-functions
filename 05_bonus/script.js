@@ -7,16 +7,19 @@ e buonasera se è sera (oltre le 17)
 
 const name = 'Mario';
 
-const start = new Date().getHours();
+
 // Dichiara la funzione qui.
 
-function greeting (name, time){
+function greeting (name){
+
+    const current_time = new Date().getHours();
+
     for (let i = 0; i < 24; i++){
-        if (time <= 13){
+        if (current_time <= 13){
             let result = 'Buongiorno' + ' ' + name
             return result
         }
-        else if (time > 13 && i < 17){
+        else if (current_time > 13 && i < 17){
             let result = 'Buon pomeriggio' + ' ' + name
             return result
         }
@@ -29,6 +32,6 @@ function greeting (name, time){
 
 // Invoca la funzione qui e stampa il risultato in console
 
-console.log(greeting(name, start));
+console.log(greeting(name));
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
