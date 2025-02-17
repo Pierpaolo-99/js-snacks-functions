@@ -5,8 +5,18 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
 // Dichiara la funzione qui.
 
+function getArreyInitialsCommonLetter (array, letter) {
+    let arrInitialsCommonLetter = []
+    for (var i = 0; i < array.length; i += 1) {
+        if (array[i].charAt(0) === letter){
+            arrInitialsCommonLetter.push(array[i])
+        }
+    }
+    return arrInitialsCommonLetter
+}
 
 // Invoca la funzione qui e stampa il risultato in console
 
+console.log(getArreyInitialsCommonLetter(names, 'A'));
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
